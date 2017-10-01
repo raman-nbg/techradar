@@ -31,6 +31,5 @@ module.exports = {
             inject: 'body'
         })
     ],
-    devtool: "#source-map",
-    watch: true
+    devtool: "#source-map"
 };
