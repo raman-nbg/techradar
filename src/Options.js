@@ -10,7 +10,7 @@ export default class Options {
             canvasHeight: 600,				            //Height of the canvas
             margin: { top: 20, right: 20, bottom: 20, left: 20 }, //The margins of the canvas
             maxRadius: 1, 			                    //What is the max value of the radius
-            dotRadius: 5, 			                    //The size of the colored circles of each blog
+            dotRadius: 5, 			                    //The size of the colored circles of each blip
             radarColorStrokes : "#AAAAAA",              //The color of the strokes between the states
             radarStateLabelColor : "#222222",           //The color of the state labels
             enableAddNew : false,                       //Enable adding new blips
