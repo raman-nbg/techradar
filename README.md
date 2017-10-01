@@ -1,6 +1,8 @@
 # Techradar
 This is another version of the ThoughtWorks technolgoy radar (https://www.thoughtworks.com/radar).
 
+![Techradar sample image](sample.png "Sample techradar")
+
 This techradar has the goal to create each company/department its own visualization of the trends to be focused on.
 To maintain the content of the techradar this one provides the possibility to dynamically add and edit the blips on the radar.
 
