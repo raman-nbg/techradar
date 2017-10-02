@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/raman-nbg/techradar.svg?branch=master)](https://travis-ci.org/raman-nbg/techradar)
+
 # Techradar
 This is another version of the ThoughtWorks technolgoy radar (https://www.thoughtworks.com/radar).
 
