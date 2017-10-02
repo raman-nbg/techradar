@@ -3,7 +3,7 @@ This is another version of the ThoughtWorks technolgoy radar (https://www.though
 
 ![Techradar sample image](sample.png "Sample techradar")
 
-This techradar has the goal to create each company/department its own visualization of the trends to be focused on.
+This techradar has the goal that each company/department can create its own visualization of the trends to be focused on.
 To maintain the content of the techradar this one provides the possibility to dynamically add and edit the blips on the radar.
 
 To use this radar you have to implement a class which provides the data for the radar.
@@ -22,7 +22,7 @@ npm install
 ### Transpile/Compile
 To run the techradar in a common browser you have to transpile the ES6 code to ES5 which can be executed by browsers. For that just run the following command in the root folder of this repository.
 ```
-webpack
+npm run build
 ```
 You can find the result in the subfolder `dist`.
 
