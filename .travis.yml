@@ -1,5 +1,14 @@
 language: node_js
 install:
-  - npm install
+- npm install
 node_js:
-  - "node"
+- node
+deploy:
+  provider: npm
+  email: mail.raman.s@gmail.com
+  api_key:
+    secure: VE2lfR9+7QhH8ADZ/A/Bbgze6rogU6ZCVFSImlx4CixupznWqVc+GjavMXJ65Ix9eBpOcp5FrbmBKfKcJTvophk1bxz78PPrtSrOwQWj7kkfT+udKnn+apqQhYz+P2nKnJrJ0OYfCO2iN9T975jm6dRm7vTRjU/j7RASsQ/GHlc1eFRVKM0LKoLPdwEshUojjNx9ijWTJeLPbltH8XX1ImKUv0vR/eQkfUQCeyLm8m7zT+PozmOUpvuFw/lr4CUoWLdcxsu4TuPC5Wnf7taBsBPK5F+3DI4MTX0+vD8KaIMwmqifhHGVkC87+L8oCZjSH94m53mjhFqS1dTAKqEvpPnCqHYiGD7l4BXZm6dl4sjMiIYcc6vQL88gqciM9u9yRi2uK990AC2nmK7WLDgXwlxdeqr+ue/BXD63yKUk5fr2YCWn0Pyq/HkyTRCvUSAh1RGbRNyo7jdxukyOqKRw//nqMT11UXq7XJJkAM34sLWi9GQCHTjStlbJVjUvO8x/UstCLn6FdzLmlaBA8ZAGM0vxW8meedYpekwT8hYeHjrMY8MHsYnDF6xDYlLytTcPU1Itt/uP0VZA6pOyOVaH5x9mEni5Pc4/N4tVmr0XPIGv+3lhYwd8NdL0ChL+MIIFDkrrgrFxBESm3ekBS50RRwJPWvRpLn77R1/Qw52D1uc=
+  on:
+    tags: true
+    branch: master
+  skip_cleanup: true

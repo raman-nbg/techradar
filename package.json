@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "d3": "3.5.17"
-  }
+  },
+  "files": [
+    "dist/techradar.js"
+  ]
 }
