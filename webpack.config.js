@@ -5,7 +5,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
     entry: {
-        techradar: './src/Radar.js',
+        "technology-radar": './src/Radar.js',
         sample: './sample/app.js',
     },
     output: {
