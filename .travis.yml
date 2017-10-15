@@ -3,6 +3,8 @@ install:
 - npm install
 node_js:
 - node
+script:
+- npm run build
 deploy:
   provider: npm
   email: mail.raman.s@gmail.com
