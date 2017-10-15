@@ -1,5 +1,3 @@
-'use strict';
-
 import ArgumentError from './ArgumentError';
 
 export default class BlipMetaDataMapper {

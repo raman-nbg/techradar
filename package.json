@@ -1,8 +1,8 @@
 {
   "name": "technology-radar",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "This techradar has the goal that each company/department can create its own visualization of the trends to be focused on. To maintain the content of the techradar this one provides the possibility to dynamically add and edit the blips on the radar.",
-  "main": "webpack.config.js",
+  "main": "./dist/technology-radar.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"
@@ -33,7 +33,7 @@
     "url": "https://github.com/raman-nbg/techradar.git"
   },
   "files": [
-    "dist/technology-radar.js",
+    "dist/",
     "src/"
   ]
 }

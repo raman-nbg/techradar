@@ -1,5 +1,3 @@
-'use strict';
-
 import ArgumentError from './ArgumentError';
 import RadarRenderingEngine from './RadarRenderingEngine';
 import Options from './Options';
@@ -61,3 +59,5 @@ export default class Radar {
         return this.radarRenderingEngine.getEditMode();
     }
 }
+
+// export var __useDefault = true;

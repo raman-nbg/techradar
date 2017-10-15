@@ -1,5 +1,3 @@
-'use strict';
-
 import * as d3 from 'd3';
 import {event as currentEvent} from 'd3';
 import ArgumentError from './ArgumentError';

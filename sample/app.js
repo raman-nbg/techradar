@@ -1,7 +1,7 @@
 'use strict';
 
 import * as d3 from 'd3';
-import Radar from './../src/Radar';
+import Radar from 'technology-radar';
 import DummyRadarDataProvider from './DummyRadarDataProvider';
 
 var radarOptions = {

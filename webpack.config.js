@@ -4,33 +4,26 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-    entry: {
-        "technology-radar": './src/Radar.js',
-        sample: './sample/app.js',
-    },
+    entry: "./src/Radar.js",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: 'technology-radar.js',
+        library: 'technology-radar',
+        libraryTarget: 'commonjs2'
     },
     module: {
         loaders: [
             {
                 loader: 'babel-loader',
                 include: [
-                    path.resolve(__dirname, "src"),
-                    path.resolve(__dirname, "sample")
+                    path.resolve(__dirname, "src")
                 ],
                 test: /\.js$/
             }
         ]
     },
     plugins: [
-        new UglifyJSPlugin(),
-        new HtmlWebpackPlugin({
-            template: 'sample/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        })
+        new UglifyJSPlugin()
     ],
     devtool: "#source-map"
 };

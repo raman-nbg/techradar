@@ -1,5 +1,3 @@
-'use strict';
-
 import ArgumentError from './ArgumentError';
 import RadarRenderingEngine from './RadarRenderingEngine';
 
