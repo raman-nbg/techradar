@@ -30,23 +30,36 @@ export default class Radar {
 
                 if (options.enableMove) {
                     this.radarRenderingEngine.setOnBlipMoved(function(item) {
-                        dataProvider.updateItem.bind(dataProvider)(item).then(function(editedItem) {
-                            radarRenderingEngine.start();
-                            radarRenderingEngine.setEditMode(true);
-                        });
+                        dataProvider.updateItem.bind(dataProvider)(item)
+                            .then(function(editedItem) {
+                                radarRenderingEngine.updateBlip(editedItem);
+                                radarRenderingEngine.start();
+                                radarRenderingEngine.setEditMode(true);
+                            })
+                            .catch(function() {
+                                console.log("Updating item rejected");
+                            });
                     });
                 }
                 if (options.enableAddNew) {
                     this.radarRenderingEngine.setOnAddBlip(function(radius, angle) {
-                        dataProvider.addItem.bind(dataProvider)(radius, angle).then(function(newItem) {
-                            radarRenderingEngine.start();
-                            radarRenderingEngine.setEditMode(true);
-                        });
+                        dataProvider.addItem.bind(dataProvider)(radius, angle)
+                            .then(function(newItem) {
+                                radarRenderingEngine.onAddBlip(newItem);
+                                radarRenderingEngine.start();
+                                radarRenderingEngine.setEditMode(true);
+                            })
+                            .catch(function() {
+                                console.log("Adding new item rejected");
+                            });
                     });
                 }
 
                 this.radarRenderingEngine.start();
-            }.bind(this));
+            }.bind(this))
+            .catch(function() {
+                console.log("Loading data rejected");
+            });
     }
 
     setEditMode(enabled) {
@@ -59,5 +72,3 @@ export default class Radar {
         return this.radarRenderingEngine.getEditMode();
     }
 }
-
-// export var __useDefault = true;

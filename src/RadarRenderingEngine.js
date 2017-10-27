@@ -37,6 +37,16 @@ export default class RadarRenderingEngine {
     setOnAddBlip(callback) {
         this.onAddBlip = callback;
     }
+    addBlip(blipToAdd) {
+        console.log("adding blip");
+        console.log(blipToAdd);
+        this.data.push(blipToAdd);
+    }
+
+    updateBlip(blipToUpdate) {
+        var index = this.data.findIndex(currentBlip => currentBlip.id === blipToUpdate.id);
+        this.data[index] = blipToUpdate;
+    }
 
     start() {
         this.init();
