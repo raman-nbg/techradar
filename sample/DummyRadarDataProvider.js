@@ -6,14 +6,16 @@ export default class DummyRadarDataProvider {
                 "radius" : 1,
                 "angle" : 45,
                 "label" : "HBase",
-                "link" : "http://google.de"
+                "link" : "http://google.de",
+                "movementId" : 0
             },
             {
                 "id" : 2,
                 "radius" : 0.6,
                 "angle" : 120,
                 "label" : "Apache Kafka",
-                "link" : ""
+                "link" : "",
+                "movementId" : 1
             }
         ];
     }
@@ -101,6 +103,18 @@ export default class DummyRadarDataProvider {
                     "name" : "HOLD",
                     "backgroundColor" : "#E4E5E4"
                 },
+            ],
+            "movements" : [
+                {
+                    "id" : 0,
+                    "description" : "not changed",
+                    "blipIcon" : "circle"
+                },
+                {
+                    "id" : 1,
+                    "description" : "changed since last release",
+                    "blipIcon" : "rectangle"
+                }
             ]
         }
     }

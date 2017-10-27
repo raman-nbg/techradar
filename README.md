@@ -224,6 +224,22 @@ The structure of the return value must be the following scheme:
         "type": "object"
       }, 
       "type": "array"
+    },
+    "movements": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "blipIcon": {
+            "type": "string",
+            "enum": ["circle", "circle-filled", "rectangle"]
+          }
+        }
+      }
     }
   }, 
   "type": "object"

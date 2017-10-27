@@ -13,4 +13,12 @@ export default class BlipMetaDataMapper {
         var quadrantIndex = Math.floor(blip.angle / 90);
         return this.metaData.quadrants[quadrantIndex];
     }
+
+    getBlipIcon(blip) {
+        var movementIndex = this.metaData.movements.findIndex(movement => movement.id === blip.movementId);
+        if (movementIndex === -1) {
+            return "circle-filled";
+        }
+        return this.metaData.movements[movementIndex].blipIcon;
+    }
 }

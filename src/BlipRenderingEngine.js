@@ -27,17 +27,58 @@ export default class BlipRenderingEngine {
 
     renderBlipSymbol(blipWrapper) {
         var blipMetaDataMapper = this.blipMetaDataMapper;
+        var options = this.options;
 
-        //Append the circles
         blipWrapper
+            .filter(function(d) {
+                return blipMetaDataMapper.getBlipIcon(d) === "circle-filled";
+            })
             .append("circle")
             .attr("class", "blipCircle")
-            .attr("r", this.options.dotRadius)
+            .attr("r", options.dotRadius)
+            .attr("cx", function(d) {
+                return d.x;
+            })
+            .attr("cy", function(d) {
+                return d.y;
+            })
+            .style("fill", function(d) {
+                var quadrant = blipMetaDataMapper.mapQuadrant(d);
+                return quadrant.color.blip;
+            });
+
+        blipWrapper
+            .filter(function(d) {
+                return blipMetaDataMapper.getBlipIcon(d) === "circle";
+            })
+            .append("circle")
+            .attr("class", "blipCircle")
+            .attr("r", options.dotRadius)
             .attr("cx", function(d) {
                 return d.x;
             }) 
             .attr("cy", function(d) {
                 return d.y;
+            })
+            .style("stroke", function(d) {
+                var quadrant = blipMetaDataMapper.mapQuadrant(d);
+                return quadrant.color.blip;
+            })
+            .style("fill", "none");
+
+        blipWrapper
+            .filter(function(d) {
+                return blipMetaDataMapper.getBlipIcon(d) === "rectangle";
+            })
+            .append("rect")
+            .attr("class", "blipCircle")
+            .attr("width", options.dotRadius * 2)
+            .attr("height", options.dotRadius * 2)
+            .attr("x", function(d) {
+                return d.x - options.dotRadius;
+            })
+            .attr("y", function(d) {
+                return d.y - options.dotRadius;
             })
             .style("fill", function(d) {
                 var quadrant = blipMetaDataMapper.mapQuadrant(d);
